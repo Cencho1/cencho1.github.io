@@ -1,77 +1,97 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap');
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'Inter', sans-serif;
-    background: radial-gradient(circle at top, #020617, #000);
-    color: #e5e7eb;
-    line-height: 1.7;
+    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+    color: #f1f1f1;
+    min-height: 100vh;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 50px 20px;
 }
 
 .logo {
     font-family: 'Playfair Display', serif;
-    font-size: 2.8rem;
-    font-weight: 800;
-    background: linear-gradient(90deg, #38bdf8, #a78bfa, #f472b6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: 3px;
+    font-size: 42px;
+    letter-spacing: 6px;
+    color: #9fd3ff;
 }
 
 .logo-sub {
-    font-size: 0.9rem;
-    letter-spacing: 2px;
-    color: #94a3b8;
+    margin-top: 8px;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #c9e6ff;
 }
 
-header {
-    padding: 40px 20px;
-    text-align: center;
-    border-bottom: 1px solid #1e293b;
-}
-
+/* NAV */
 nav {
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 nav a {
-    color: #38bdf8;
-    margin: 0 12px;
+    color: #ffffff;
     text-decoration: none;
-    font-weight: 600;
+    margin: 0 12px;
+    font-weight: 500;
+    position: relative;
 }
 
-nav a:hover { color: #a78bfa; }
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #9fd3ff;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
 
+nav a:hover::after {
+    width: 100%;
+}
+
+/* CONTENIDO */
 .container {
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
 }
 
 .card {
-    background: rgba(2,6,23,.9);
+    background: rgba(255, 255, 255, 0.08);
+    max-width: 700px;
+    padding: 40px;
     border-radius: 16px;
-    padding: 30px;
-    box-shadow: 0 15px 40px rgba(0,0,0,.6);
+    backdrop-filter: blur(10px);
 }
 
-h2 {
+.card h2 {
     font-family: 'Playfair Display', serif;
-    margin-bottom: 20px;
-    color: #7dd3fc;
+    font-size: 30px;
+    margin-bottom: 15px;
 }
 
-.poema {
-    white-space: pre-line;
-    font-style: italic;
-    font-size: 1.1rem;
+.card p {
+    line-height: 1.7;
+    font-size: 16px;
 }
 
+/* FOOTER */
 footer {
     text-align: center;
     padding: 25px;
-    color: #64748b;
-    font-size: 0.9rem;
+    font-size: 13px;
+    color: #bcdcff;
 }
