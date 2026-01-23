@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter&display=swap');
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'Inter', sans-serif;
@@ -9,30 +13,36 @@ body {
     line-height: 1.7;
 }
 
-.logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.8rem;
-    font-weight: 800;
-    background: linear-gradient(90deg, #38bdf8, #a78bfa, #f472b6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: 3px;
-}
-
-.logo-sub {
-    font-size: 0.9rem;
-    letter-spacing: 2px;
-    color: #94a3b8;
-}
-
+/* HEADER */
 header {
     padding: 40px 20px;
     text-align: center;
     border-bottom: 1px solid #1e293b;
 }
 
+/* LOGO IA (SVG) */
+.logo-svg {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.logo-svg svg {
+    max-width: 100%;
+    filter: drop-shadow(0 0 12px rgba(167,139,250,.35));
+}
+
+/* SUBTÍTULO */
+.logo-sub {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    color: #94a3b8;
+    margin-top: 6px;
+}
+
+/* NAV */
 nav {
-    margin-top: 20px;
+    margin-top: 22px;
 }
 
 nav a {
@@ -40,10 +50,26 @@ nav a {
     margin: 0 12px;
     text-decoration: none;
     font-weight: 600;
+    position: relative;
 }
 
-nav a:hover { color: #a78bfa; }
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 50%;
+    bottom: -6px;
+    background: linear-gradient(90deg, #38bdf8, #a78bfa);
+    transition: .3s ease;
+    transform: translateX(-50%);
+}
 
+nav a:hover::after {
+    width: 100%;
+}
+
+/* CONTENIDO */
 .container {
     max-width: 900px;
     margin: 50px auto;
@@ -63,16 +89,17 @@ h2 {
     color: #7dd3fc;
 }
 
+/* POEMAS */
 .poema {
     white-space: pre-line;
     font-style: italic;
     font-size: 1.1rem;
 }
 
+/* FOOTER */
 footer {
     text-align: center;
     padding: 25px;
     color: #64748b;
     font-size: 0.9rem;
 }
-
