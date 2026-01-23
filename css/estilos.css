@@ -75,12 +75,4 @@ footer {
     color: #64748b;
     font-size: 0.9rem;
 }
-.logo-svg {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-}
 
-.logo-svg svg {
-    max-width: 100%;
-}
