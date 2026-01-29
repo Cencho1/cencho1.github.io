@@ -95,3 +95,62 @@ footer {
     font-size: 13px;
     color: #bcdcff;
 }
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+/* CARDS MÁS EQUILIBRADAS */
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 35px;
+    border-radius: 18px;
+    backdrop-filter: blur(12px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.card h2,
+.card h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 15px;
+}
+
+.card ul {
+    margin-top: 10px;
+    padding-left: 18px;
+}
+
+.card ul li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* POEMA (TEXTO DESTACADO) */
+.poema {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    line-height: 1.9;
+    text-align: center;
+    color: #e8f4ff;
+    padding: 20px 10px;
+}
+
+/* SECCIONES DE INTERPRETACIÓN Y APRENDIZAJE */
+.card p {
+    line-height: 1.8;
+}
+
+/* FOOTER MÁS FINO */
+footer {
+    margin-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+}
