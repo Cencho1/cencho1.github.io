@@ -1,9 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vallejo AI – Poemas de César Vallejo</title>
+<meta name="description" content="Sitio académico dedicado a la poesía de César Vallejo con apoyo de IA.">
+
+<link rel="stylesheet" href="estilos.css">
+
+<style>
+
+/* RESET */
+body{
+ font-family: Arial, sans-serif;
+ margin:0;
+ background:#f4f6f9;
+ color:#222;
+}
+
+/* HEADER */
+header{
+ background:#0a2540;
+ color:white;
+ text-align:center;
+ padding:25px;
+}
+
+header img{
+ width:90px;
+}
+
+/* CONTENIDO */
+.container{
+ width:90%;
+ max-width:1000px;
+ margin:auto;
+ padding:30px 0;
+}
+
+h1,h2,h3{
+ color:#0a2540;
+}
+
+.hero img{
+ width:100%;
+ border-radius:10px;
+}
+
+/* FOOTER */
+footer{
+ background:#0a2540;
+ color:white;
+ text-align:center;
+ padding:20px;
+ margin-top:40px;
+}
+
+/* WHATSAPP */
+.wsp-float{
+ position:fixed;
+ width:60px;
+ height:60px;
+ bottom:25px;
+ right:25px;
+ z-index:999;
+}
+
+.wsp-float img{
+ width:100%;
+}
+
+/* POPUP */
+#popupVallejo{
+ display:none;
+ position:fixed;
+ top:0;
+ left:0;
+ width:100%;
+ height:100%;
+ background:rgba(0,0,0,0.6);
+ justify-content:center;
+ align-items:center;
+ z-index:1000;
+}
+
+.popup-vallejo{
+ background:white;
+ padding:30px;
+ border-radius:10px;
+ text-align:center;
+ color:black;
+ max-width:350px;
+}
+
+.popup-vallejo button{
+ margin-top:15px;
+ padding:10px 20px;
+ border:none;
+ background:#0a2540;
+ color:white;
+ border-radius:5px;
+ cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<img src="logo.png" alt="Logo Vallejo AI">
+<h1>Vallejo AI</h1>
+<p>Explorando la poesía de César Vallejo con tecnología</p>
+</header>
+
+<div class="container">
+
+<section class="hero">
+<img src="imagen-principal.jpg" alt="Imagen principal Vallejo">
+</section>
+
+<h2>Introducción</h2>
+<p>
+Este sitio académico presenta una recopilación de poemas de César Vallejo,
+organizados y apoyados con herramientas digitales modernas.
+</p>
+
+<h2>Poemas destacados</h2>
+
+<h3>Poema 1</h3>
+<p>Accede al análisis completo del primer poema.</p>
+
+<h3>Poema 2</h3>
+<p>Explora el segundo poema con interpretación literaria.</p>
+
+<h3>Poema 3</h3>
+<p>Descubre el tercer poema con apoyo tecnológico.</p>
+
+</div>
+
 <footer>
-    Proyecto web académico – GitHub Pages <br>
-    © Samuel Ccencho
+Proyecto web académico – GitHub Pages <br>
+© Samuel Ccencho
 </footer>
 
-<!-- POPUP VALLEJO -->
+<!-- POPUP -->
 <div id="popupVallejo">
  <div class="popup-vallejo">
   <h2>¡Espera! 😲</h2>
@@ -12,7 +154,7 @@
  </div>
 </div>
 
-<!-- BOTÓN WHATSAPP PRO -->
+<!-- WHATSAPP -->
 <a href="https://wa.me/51999999999" class="wsp-float" target="_blank">
  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
 </a>
