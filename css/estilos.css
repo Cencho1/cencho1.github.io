@@ -109,71 +109,30 @@ transition:transform 0.3s;
 transform:scale(1.1);
 }
 
-/* ===== DECORACIONES LITERARIAS ===== */
-.decor-libro-izq{
+/* ===== LIBROS LATERALES LITERARIOS (FIJOS Y REALES) ===== */
+
+.libro-lateral{
 position:fixed;
-left:20px;
 top:120px;
-width:90px;
-opacity:0.15;
-z-index:0;
-}
-
-.decor-libro-der{
-position:fixed;
-right:20px;
-top:200px;
-width:100px;
-opacity:0.15;
-z-index:0;
-}
-
-.decor-pluma{
-position:fixed;
-right:40px;
-bottom:120px;
-width:80px;
-opacity:0.12;
-z-index:0;
-}
-
-/* ocultar decoraciones en celular */
-@media(max-width:768px){
-.decor-libro-izq,
-.decor-libro-der,
-.decor-pluma{
-display:none;
-}
-}
-
-/* ===== LIBROS LATERALES REALES ===== */
-
-.libro-lateral-izq,
-.libro-lateral-der{
-position:fixed;
-top:0;
-width:220px;
-height:100vh;
-background-size:contain;
-background-repeat:no-repeat;
-background-position:center;
-opacity:0.08;
-z-index:0;
+width:190px;
+z-index:1;
+opacity:1;
 pointer-events:none;
+filter:drop-shadow(0px 6px 12px rgba(0,0,0,0.15));
 }
 
-.libro-lateral-izq{
-left:0;
-background-image:url("../img/libros.png");
+/* lado izquierdo */
+.libro-izq{
+left:15px;
 }
 
-.libro-lateral-der{
-right:0;
+/* lado derecho */
+.libro-der{
+right:15px;
 transform:scaleX(-1);
-background-image:url("../img/libros.png");
 }
 
-/* contenido encima */
+/* asegurar que el contenido esté encima */
 header,
 .container,
 footer{
@@ -181,37 +140,10 @@ position:relative;
 z-index:2;
 }
 
-/* ocultar libros en celular */
+/* ocultar en celulares */
 @media(max-width:1000px){
-.libro-lateral-izq,
-.libro-lateral-der{
+.libro-lateral{
 display:none;
 }
-}
-/* Libros decorativos laterales */
-.libro-lateral {
-    position: fixed;      /* se queda fijo aunque hagas scroll */
-    top: 120px;           /* altura desde arriba */
-    width: 180px;         /* tamaño del libro */
-    z-index: 1;           /* detrás del contenido */
-    opacity: 1;           /* sin transparencia */
-    pointer-events: none; /* evita que bloquee clics */
-}
-
-/* lado izquierdo */
-.libro-izq {
-    left: 10px;
-}
-
-/* lado derecho */
-.libro-der {
-    right: 10px;
-}
-
-/* opcional: ocultar en celulares */
-@media (max-width: 900px) {
-    .libro-lateral {
-        display: none;
-    }
 }
 
