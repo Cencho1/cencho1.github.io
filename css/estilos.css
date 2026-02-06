@@ -188,3 +188,30 @@ z-index:2;
 display:none;
 }
 }
+/* Libros decorativos laterales */
+.libro-lateral {
+    position: fixed;      /* se queda fijo aunque hagas scroll */
+    top: 120px;           /* altura desde arriba */
+    width: 180px;         /* tamaño del libro */
+    z-index: 1;           /* detrás del contenido */
+    opacity: 1;           /* sin transparencia */
+    pointer-events: none; /* evita que bloquee clics */
+}
+
+/* lado izquierdo */
+.libro-izq {
+    left: 10px;
+}
+
+/* lado derecho */
+.libro-der {
+    right: 10px;
+}
+
+/* opcional: ocultar en celulares */
+@media (max-width: 900px) {
+    .libro-lateral {
+        display: none;
+    }
+}
+
