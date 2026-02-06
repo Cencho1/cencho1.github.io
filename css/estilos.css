@@ -67,7 +67,6 @@ box-shadow:0 4px 12px rgba(0,0,0,0.1);
 position:relative;
 }
 
-/* efecto hoja */
 .card::before{
 content:"📜";
 position:absolute;
@@ -109,8 +108,8 @@ transition:transform 0.3s;
 .wsp-float:hover{
 transform:scale(1.1);
 }
-/* ===== DECORACIONES LITERARIAS ===== */
 
+/* ===== DECORACIONES LITERARIAS ===== */
 .decor-libro-izq{
 position:fixed;
 left:20px;
@@ -138,14 +137,16 @@ opacity:0.12;
 z-index:0;
 }
 
-/* ocultar en celulares */
+/* ocultar decoraciones en celular */
 @media(max-width:768px){
 .decor-libro-izq,
 .decor-libro-der,
 .decor-pluma{
 display:none;
 }
-/* ===== LIBROS LATERALES LITERARIOS ===== */
+}
+
+/* ===== LIBROS LATERALES REALES ===== */
 
 .libro-lateral-izq,
 .libro-lateral-der{
@@ -153,7 +154,7 @@ position:fixed;
 top:0;
 width:220px;
 height:100vh;
-background-size:cover;
+background-size:contain;
 background-repeat:no-repeat;
 background-position:center;
 opacity:0.08;
@@ -161,20 +162,18 @@ z-index:0;
 pointer-events:none;
 }
 
-/* lado izquierdo */
 .libro-lateral-izq{
 left:0;
-background-image:url("https://img.freepik.com/fotos-premium/pila-libros-dibujo-tinta-blanco-negro_725369-1040.jpg?w=360");
+background-image:url("../img/libros.png");
 }
 
-/* lado derecho espejo */
 .libro-lateral-der{
 right:0;
 transform:scaleX(-1);
-background-image:url("https://img.freepik.com/fotos-premium/pila-libros-dibujo-tinta-blanco-negro_725369-1040.jpg?w=360");
+background-image:url("../img/libros.png");
 }
 
-/* que el contenido quede encima */
+/* contenido encima */
 header,
 .container,
 footer{
@@ -182,12 +181,10 @@ position:relative;
 z-index:2;
 }
 
-/* ocultar en celulares */
+/* ocultar libros en celular */
 @media(max-width:1000px){
 .libro-lateral-izq,
 .libro-lateral-der{
 display:none;
 }
 }
-
-
